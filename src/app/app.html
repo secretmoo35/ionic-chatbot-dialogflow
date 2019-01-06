@@ -1,0 +1,14 @@
+<ion-nav [root]="rootPage">
+</ion-nav>
+
+<div class="chat-bot" *ngIf="isShowChat()">
+  <div class="chat-bot-tip hidden" #chatBotTip>
+    <p>สวัสดีค่ะ</p>
+    <div class="arrow-right"></div>
+  </div>
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="goToChatRoom()">
+      <ion-icon name="ios-chatbubbles-outline"></ion-icon>
+    </button>
+  </ion-fab>
+</div>

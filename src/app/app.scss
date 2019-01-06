@@ -1,0 +1,82 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.chat-bot {
+
+  .chat-bot-tip {
+    position: absolute;
+    bottom: 15px;
+    right: -1000px;
+    background-color: #343434;
+    color: #ffffff;
+    padding: 0px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.1);
+
+    .arrow-right {
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid #343434;
+      right: -10px;
+      position: absolute;
+      bottom: 8px;
+    }
+  }
+
+  .open {
+    right: 80px;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+  }
+
+  .hidden {
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100px)
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(100px)
+    }
+  }
+}
