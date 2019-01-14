@@ -18,7 +18,7 @@ export class ChatRoomPage {
 
   @ViewChild(Content) content: Content;
   @ViewChild('myChat') myChat: ElementRef;
-  accessToken: string = 'cc7d4844742b4bc7bcabe59d2a6e7b70';
+  accessToken: string = '5a2288047714475da53216e5f245966d';
   messages: Array<Message> = [];
   message: string = '';
   dialogflow;
@@ -26,9 +26,9 @@ export class ChatRoomPage {
     this.dialogflow = new ApiAiClient({
       accessToken: this.accessToken
     });
-    this.dialogflow.agentName = "NongShabu"
+    this.dialogflow.agentName = "Dialogflow"
     this.dialogflow.agentImage = "http://www.realityhackertoolkit.com/wp-content/uploads/2017/04/Avatar.png";
-    this.onTextRequestDialogflow('welcome to nongshabu');
+    this.onTextRequestDialogflow('Welcome to dialogflow');
   }
 
   ionViewDidLoad() {

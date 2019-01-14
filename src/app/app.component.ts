@@ -32,8 +32,10 @@ export class MyApp {
         this.renderer.removeClass(this.elem.nativeElement, 'hidden');
         this.renderer.addClass(this.elem.nativeElement, 'open');
         setTimeout(() => {
-          this.renderer.addClass(this.elem.nativeElement, 'hidden');
-        }, 2500);
+          if (this.elem && this.elem.nativeElement) {
+            this.renderer.addClass(this.elem.nativeElement, 'hidden');
+          }
+        }, 2000);
       }
       // Tip: end style
     });
@@ -45,7 +47,7 @@ export class MyApp {
 
   isShowChat() {
     if (this.nav.getActive()) {
-      console.log(this.nav.getActive().id);
+      // console.log(this.nav.getActive().id);
       switch (this.nav.getActive().id) {
         case 'ChatRoomPage':
           return false;
